@@ -1,0 +1,18 @@
+.h3{
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.h2 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin: 0;
+
+    &_cnt {
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        margin: 0;
+        color: var(--bg-color);
+    }
+}

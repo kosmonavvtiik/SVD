@@ -1,0 +1,29 @@
+.btn-more {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    width: 200px;
+}
+
+.btn-see {
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    border-radius: 3px;
+    background: rgba(108, 108, 108, 0.205);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    width: 200px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

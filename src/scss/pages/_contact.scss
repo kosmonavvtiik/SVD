@@ -1,0 +1,53 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 80px 40px;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: var(--bgborder-color);
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        width: 300px;
+        background-color: var(--bg-color);
+
+    }
+
+    &__call {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    }
+
+
+    &__name {
+        text-align: center;
+        margin: 0;
+    }
+
+    &__text {
+        display: flex;
+        width: 900px;
+        margin-left: 100px;
+    }
+
+    &__map {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}

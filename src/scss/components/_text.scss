@@ -1,0 +1,69 @@
+.h2 {
+    text-align: center;
+    font-size: 36px;
+}
+.text {
+    &__name {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        color: #000000;
+    }
+}
+.list {
+    &__text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 22px;
+        color: var(--text-color);
+
+        &:hover {
+            color: var(--hover-nav);
+        }
+
+    }
+}
+.info {
+    &__number {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 22px;
+        color: var(--text-color);
+    }
+    &__time {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 15px;
+        color: var(--time-color);
+    }
+}
+
+.text-fut {
+    display: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.text-job {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
+.text-cont {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+.text-phone {
+    text-align: center;
+    margin: 0;
+    color: rgb(30, 34, 33);
+}

@@ -1,0 +1,68 @@
+.vacancy {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
+    .h3 {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        border-radius: 24px;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+        padding: 25px;
+    }
+
+    &__image {
+        width: 280px;
+        height: 360px;
+        border-radius: 15px;
+        padding: 1.5rem;
+        position: relative;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+    }
+
+    &__btn {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &__btns {
+
+        text-align: center;
+    }
+    
+    
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 1000px;
+        
+        a {
+            color: #fff;
+        }
+    }
+}
