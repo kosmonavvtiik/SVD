@@ -40,7 +40,6 @@
         width: 42px;
         height: 42px;
     }
-
 }
 
 .info {
@@ -59,3 +58,22 @@
     transition: fill 0.5s;
 }
 
+@media (max-width: $tablet-bp) {
+    .nav {
+        gap: 50px;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        &__contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Расстояние между элементами */
+        }
+    }
+}
