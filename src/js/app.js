@@ -22,25 +22,3 @@ function changeColor() {
     }
 }
 setInterval(changeColor, 1000);
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const navToggle = document.querySelector('.nav__toggle');
-    const navPopup = document.createElement('div');
-    navPopup.className = 'nav__popup';
-    document.body.appendChild(navPopup);
-
-    const navList = document.querySelector('.nav__list').cloneNode(true);
-    navPopup.appendChild(navList);
-
-    navToggle.addEventListener('click', function() {
-        navPopup.classList.toggle('nav__popup--open');
-    });
-
-    navPopup.addEventListener('click', function(e) {
-        if (e.target === navPopup) {
-            navPopup.classList.remove('nav__popup--open');
-        }
-    });
-});
