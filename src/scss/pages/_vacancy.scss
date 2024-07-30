@@ -31,6 +31,7 @@
         border-radius: 15px;
         padding: 1.5rem;
         position: relative;
+        margin: 0 auto;
         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     }
 
@@ -59,10 +60,22 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 1000px;
+        width: 100%;
         
         a {
             color: #fff;
+        }
+    }
+}
+
+@media (max-width: $tablet-bp) {
+    .vacancy {
+        &__card {
+            flex-direction: column; // Stack the elements vertically on tablet screens
+        }
+
+        &__image {
+            margin-bottom: 20px; // Add some space between the image and the text
         }
     }
 }
