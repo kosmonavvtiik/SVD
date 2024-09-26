@@ -14,11 +14,14 @@ function changeColor() {
     const endRed = 24 * 60 - 1;
 
     if (time >= startGreen && time <= endGreen) {
-        document.getElementById('circle').style.fill = '#0DC268'; // зеленый
+        document.getElementById('circle1').style.fill = '#0DC268'; // зеленый
+        document.getElementById('circle2').style.fill = '#0DC268'; // зеленый
     } else if (time >= startOrange && time <= endOrange) {
-        document.getElementById('circle').style.fill = 'orange'; // оранжевый
+        document.getElementById('circle1').style.fill = 'orange'; // оранжевый
+        document.getElementById('circle2').style.fill = 'orange'; // оранжевый
     } else {
-        document.getElementById('circle').style.fill = 'red'; // красный
+        document.getElementById('circle1').style.fill = 'red'; // красный
+        document.getElementById('circle2').style.fill = 'red'; // красный
     }
 }
 setInterval(changeColor, 1000);

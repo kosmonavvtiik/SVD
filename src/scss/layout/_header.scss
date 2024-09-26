@@ -1,70 +1,18 @@
+
 .header {
     display: flex;
     align-items: center;
-    position: relative;
-    justify-content: space-between;
-    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4; 
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
 }
 
-// ! кнопка бургер с анимацией
-.toggle-menu {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display: none;
-}
-.line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #000;
-    stroke-width: 5.5;
-    stroke-linecap: round;
-}
-.toggle-menu  {
-    .top {
-        stroke-dasharray: 40 130;
-    }
-    .middle {
-        stroke-dasharray: 40 140;
-    }
-    .bottom {
-        stroke-dasharray: 40 205;
-    }
-}
-.active {
-    .top {
-        stroke-dasharray: 75 130;
-        stroke-dashoffset: -63px;
-    }
-    .middle {
-        stroke-dashoffset: -102px;
-    }
-    .bottom {
-        stroke-dasharray: 110 205;
-        stroke-dashoffset: -86px;
-    }
-}
-
-
-
-@media (max-width: $tablet-bp) {
+@media (max-width : $tablet-bp) {
     .header {
-        padding: 20px;
-        flex-direction: column;
-    }
-    .toggle-menu {
-        display: block;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        padding: 20px;
-        justify-content: center;
-
+        padding: 12px 0;
     }
 }

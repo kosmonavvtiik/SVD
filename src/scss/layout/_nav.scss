@@ -3,37 +3,42 @@
     align-items: center;
     gap: 80px;
 
+    &__menu-logo {
+        display: flex;
+        align-items: center;
+
+        gap: 16px;
+    }
+
+    &__burger {
+        display: none;
+        position: relative;
+        width: 40px;
+        border: none;
+    }
+
+    &__b {
+        width: 50px;
+    }
+
     &__logo {
         width: 90px;
         height: 90px;
     }
-    &__burger {
+
+    /////
+    &__pics {
         position: absolute;
         opacity: 0;
+        pointer-events: none;
     }
-    &__menu {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-    }
-    &__menu-logo {
-        display: flex;
-        align-items: center;
-        gap: 13px;
-    }
-    &__menu-logo p {
-        margin-left: 10px;
-    }
-    &__contacts {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-    }
+
     &__social {
         position: absolute;
         opacity: 0;
         pointer-events: none;
     }
+
     &__footer {
         position: absolute;
         opacity: 0;
@@ -41,165 +46,190 @@
     }
 }
 
+.phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.contacts1 {
+    display: none;
+}
+
+.nav__burger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left: 5px;
+    transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+.nav__burger span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.nav__burger span:nth-child(2) {
+    transform: translateY(10px);
+}
+
+.nav.open .nav__burger span {
+    background-color: black;
+}
+
+.nav.open .nav__burger span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.nav.open .nav__burger span:nth-child(2) {
+    opacity: 0;
+}
+.nav.open .nav__burger span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
 .contacts {
-    &__icon {
+    display: flex;
+    gap: 30px;
+
+    &__icons {
         display: flex;
         align-items: center;
         gap: 25px;
     }
 
-    &__tg,
+    &__pic {
+        width: 40px;
+    }
+    
+    &__tg {
+        width: 42px;
+    }
     &__ml {
         width: 42px;
-        height: 42px;
     }
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 2px;
-
+.phone {
     &__time {
         display: flex;
         align-items: center;
         gap: 5px;
     }
 }
-#circle {
-    transition: fill 0.5s;
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 @media (max-width: $tablet-bp) {
     .nav {
-        gap: 211px;
-        &__footer {
-            color: rgba(0, 0, 0, 0.5);
-            font-weight: 400;
-            line-height: 28px;
-            text-decoration-line: underline;
-            pointer-events: none;
-            position: absolute;
-            opacity: 0;
-            transition: color 0.2s ease-in;
+        gap: 341px;
 
-            &:hover {
-                color: var(--main-color);
-            }
+        &__menu-logo {
+            display: flex;
+            gap: 20px;
         }
+
         &__logo {
-            margin-left: 36px;
+            width: 80px;
         }
 
-        &__menu {
-            transition: opacity 0.2s ease-in-out;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            align-items: center;
-            flex-direction: column;
-            width: 375px;
-            padding: 40px 0 254px 0;
-            background-color: var(--bg-color);
-            box-shadow: 3px 3px 10px rgb(0 0 0 / 0.1);
-            transition: opacity 0.2s ease-in-out;
-            opacity: 0;
-            pointer-events: none;
-
-            .menu__link {
-                font-size: 24px;
-            }
-        }
-        &__contacts {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px; /* Расстояние между элементами */
-        }
         &__burger {
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
-            opacity: 1;
+            display: block;
+            width: 40px;
+            height: 40px;
+            z-index: 5;
+            background-color: transparent;
+            margin-left: 10px;
         }
-        &__social {
-            display: flex;
-            gap: 10px;
-            position: absolute;
-            opacity: 0;
-            align-items: center;
-            pointer-events: none;
+    }
 
-            & > svg {
-                flex-shrink: 0;
-                width: 24px;
-                height: 24px;
-            }
+    .menu {
+        position: absolute;
+        left: -300px;
+        top: 99px;
+        width: 300px;
+        height: 300px;
+        display: block;
+        padding: 75px 20px 20px 20px;
+        transition: transform 0.5s;
+        z-index: 4;
+        background-color: var(--bg-color);
+        align-items: center;
+        border-radius: 0px 0px 50px 0px;
 
-            &_active {
-                opacity: 1;
-                z-index: 12;
-                left: 51px;
-                top: calc(100% + 330px);
-                pointer-events: all;
-            }
+        &__link {
+            // color: var(--text-color);
+            display: block;
+            padding: 10px 0;
+            text-align: center;
         }
-        &__phone {
-            transition: color 0.2s ease-in;
-            &:hover {
-                color: var(--main-color);
-            }
-        }
-        .politics_active {
-            opacity: 1;
-            z-index: 11;
-            pointer-events: all;
-            top: calc(100% + 456px);
-            left: 78px;
-        }
+    }
 
-        .requisites_active {
-            opacity: 1;
-            z-index: 11;
-            pointer-events: all;
-            top: calc(100% + 486px);
-            left: 151px;
-        }
-        .menu {
-            &_active {
-                opacity: 1;
-                z-index: 11;
-                pointer-events: all;
-            }
-        }
-        .toggle-menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    .nav.open .menu {
+        transform: translateX(100%);
+    }
+}
 
-        }
+@media (max-width: 807px) {
+    .nav {
+        gap: 200px;
+    }
+}
+@media (max-width: 625px) {
+    .nav {
+        gap: 100px;
     }
 }
 
 @media (max-width: $mobile-bp) {
-    .nav__list-logo {
-        flex-direction: column;
-        align-items: center;
+    .nav {
+        gap: 50px;
+
+        &__menu-logo {
+            gap: 7px;
+        }
+
+        &__logo {
+            position: absolute;
+            z-index: 5;
+            // width: 50px;
+            left: 43%;
+            // margin-top: -25px;
+        }
+
+        &__burger {
+            margin: 0;
+        }
     }
-    .nav__list {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
+
+    .contacts {
+        opacity: 0;
     }
-    .nav__contacts {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
+
+    .menu {
+        left: -375px;
+        width: 375px;
+        height: 325px;
+        top: 75px;
     }
-    .contacts__icon {
-        margin-top: 10px;
+
+    .contacts1 {
+        display: flex;
+        padding: 20px 0px;
+        gap: 25px;
+
+        &__icons1 {
+            display: flex;
+            gap: 13px;
+        }
+
+        &__pic1 {
+            width: 30px;
+        }
     }
 }

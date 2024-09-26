@@ -9,6 +9,11 @@
     cursor: pointer;
     transition: 0.4s ease;
     width: 200px;
+
+    &:hover {
+        background: rgba(19, 26, 17, 0.699);
+    }
+ 
 }
 
 .btn-see {
