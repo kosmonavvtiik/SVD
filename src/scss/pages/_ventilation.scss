@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 155px;
 }
 
 .custom-card {
@@ -12,6 +12,7 @@
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
   position: relative;
+  will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
 }
 
 .custom-card-front,
@@ -27,12 +28,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.custom-card-front {
   background: rgba(17, 25, 40, 0.25);
   backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.125);
+  will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+}
+
+.custom-card-front {
+  z-index: 2;
 }
 
 .custom-banner-image {
@@ -72,13 +75,13 @@
   font-size: 0.8rem;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .custom-outline {
   background: transparent;
   color: rgba(0, 212, 255, 0.9);
   border: 1px solid rgba(0, 212, 255, 0.6);
-  transition: all 0.3s ease;
 }
 
 .custom-outline:hover {
@@ -91,7 +94,6 @@
   background: rgba(0, 212, 255, 0.9);
   color: rgba(255, 255, 255, 0.95);
   font-weight: bold;
-  transition: all 0.3s ease;
 }
 
 .custom-fill:hover {
