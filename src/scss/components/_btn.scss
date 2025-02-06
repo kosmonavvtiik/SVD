@@ -1,20 +1,61 @@
+/* Стиль второй кнопки */
 .btn-more {
-    padding: 0.6rem;
-    outline: none;
+    position: relative;
     border: none;
-    border-radius: 3px;
-    background: black;
-    color: white;
+    outline: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    background: #e74c3c; 
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
     font-weight: bold;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
     width: 200px;
-
-    &:hover {
-        background: rgba(19, 26, 17, 0.699);
-    }
- 
+    overflow: hidden; 
+    color: #fff; 
 }
+
+
+.btn-more a {
+    text-decoration: none;
+    color: inherit; 
+    transition: color 0.3s ease;
+}
+
+
+.btn-more:hover {
+    background: #f7ca18; 
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12); 
+    color: #333; 
+}
+
+.btn-more:hover a {
+    color: inherit; 
+}
+
+
+.btn-more::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.btn-more:active::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+ 
+
 .btn-product {
     background: none;
     border: none;
@@ -23,26 +64,68 @@
     cursor: pointer;
   }
 
+
+/* Стиль кнопки */
 .btn-see {
+    position: relative;
     border: none;
     outline: none;
-    padding: 0.6rem;
-    border-radius: 3px;
-    background: rgba(108, 108, 108, 0.205);
+    padding: 0.8rem 1.2rem; /* Увеличил отступы для удобства */
+    border-radius: 5px; /* Soft углы */
+    background: #f7ca18; /* Жёлтый цвет из логотипа */
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
     font-weight: bold;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
     width: 200px;
-
-    a {
-        text-decoration: none;
-        color: black;
-
-    }
-    
-    &:hover {
-        background: rgba(109, 109, 109, 0.699);
-
-    }
+    overflow: hidden; /* Для анимации */
+    color: #333; /* Чёрный текст на жёлтом фоне */
 }
 
+/* Стиль ссылки внутри кнопки */
+.btn-see a {
+    text-decoration: none;
+    color: inherit; /* Наследует цвет текста кнопки */
+    transition: color 0.3s ease;
+}
+
+/* Анимация при наведении */
+.btn-see:hover {
+    background: #e74c3c; /* Красный цвет из логотипа */
+    transform: translateY(-3px); /* Легко "подпрыгивает" при наведении */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12); /* Более выраженная тень */
+    color: #fff; /* Белый текст на красном фоне */
+}
+
+.btn-see:hover a {
+    color: inherit; /* Наследует изменение цвета текста */
+}
+
+/* Добавляем волновой эффект при клике */
+.btn-see::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.btn-see:active::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+
+@media (max-width: $tablet-bp) {
+    .btn-see,
+    .btn-more {
+        width: 180px;
+    }
+}

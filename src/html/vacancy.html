@@ -30,64 +30,141 @@
     <!-- End Header -->
 
     <section class="vacancy container">
-        <div class="vacancy__block">
-            <article class="vacancy__card">
-                <div class="vacancy__image">
-                    <img src="./assets/images/welder.avif" alt="contact">
-                </div>
-                <div class="vacancy__info">
-                    <h3 class="h3">Сварщик</h3>
-                    <p class="text-job">Работа нашей в монтажной организации, на предприятиях в Ступинском районе,
-                        монтаж и строительство новых сетей (ЦО и ГВС), сварка стальных труб и в ППУ изоляции от ф15
-                        до ф400, производство сварочных работ в тепловых камерах, сварка монтаж металлоконструкций.
-                        Оформление по ТК РФ, доставка на объект, дружный коллектив, график работы с 9-00 до 17-00,
-                        5-2, испытательный срок 1 месяц, З/п выплачивается каждую неделю, оплачиваемый отпуск,
-                        больничный лист в соответствии с Законодательством.</p>
-                    <div class="vacancy__btn">
-                        <button class="btn-more"><a class="reset-link" href="contact.html">Отликнуться</a></button>
+        <article class="vacancy-card-container">
+            <!--! карточка слесаря -->
+            <div class="vacancy-card" id="card">
+                <div class="vacancy-card-front">
+                    <div class="vacancy-image">
+                        <img src="./assets/images/workers/plumber.avif" alt="Слесарь">
+                    </div>
+                    <div class="vacancy-header">
+                        <div class="vacancy-info">
+                            <h2 class="vacancy-title">Слесарь</h2>
+                            <div class="vacancy-work">
+                                <p class="vacancy-salary">73 000 - 120 000 ₽ за месяц</p>
+                                <span class="vacancy-experience">Опыт от 2 лет</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <button class="custom-btn custom-outline-vac details">Описание вакансии</button>
+                        <button class="contact-button" id="contactButton">Связаться</button>
                     </div>
                 </div>
-            </article>
-
-            <article class="vacancy__card">
-                <div class="vacancy__image">
-                    <img src="./assets/images/plumber.avif" alt="contact">
-                </div>
-                <div class="vacancy__info">
-                    <h3 class="h3">Слесарь</h3>
-                    <p class="text-job">Наша монтажная организация приглашает на работу слесаря для выполнения работ на предприятиях в Ступинском районе. Основные обязанности включают:
+                <div class="vacancy-card-back">
+                    <h2 class="vacancy-title-back">Описание вакансии</h2>
+                    <p class="custom-cardvac-description" data-name="plumber">Наша монтажная организация приглашает на
+                        работу слесаря
+                        для выполнения работ на предприятиях в Ступинском районе. Основные обязанности включают:
                         Монтаж и строительство новых сетей отопления и горячего водоснабжения (ЦО и ГВС).
                         Установка и ремонт стальных труб и труб в ППУ изоляции диаметром от ф15 до ф400.
                         Выполнение слесарных работ в тепловых камерах.
                         Монтаж и установка металлоконструкций.</p>
-                    <div class="vacancy__btn">
-                        <button class="btn-more"><a class="reset-link" href="contact.html">Отликнуться</a></button>
+                    <button class="custom-btn custom-outline-vac close">Развернуть</button>
+                </div>
+            </div>
+            <!--! карточка сварщика -->
+            <div class="vacancy-card" id="card">
+                <div class="vacancy-card-front">
+                    <div class="vacancy-image">
+                        <img src="./assets/images/workers/welder.avif" alt="Сварщик">
+                    </div>
+                    <div class="vacancy-header">
+                        <div class="vacancy-info">
+                            <h2 class="vacancy-title">Сварщик</h2>
+                            <div class="vacancy-work">
+                                <p class="vacancy-salary">90 000 - 130 000 ₽ за месяц</p>
+                                <span class="vacancy-experience">Опыт от 2 лет</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <button class="custom-btn custom-outline-vac details">Описание вакансии</button>
+                        <button class="contact-button" id="contactButton">Связаться</button>
                     </div>
                 </div>
-            </article>
-
-            <article class="vacancy__card">
-                <div class="vacancy__image">
-                    <img src="./assets/images/electrician.avif" alt="contact">
+                <div class="vacancy-card-back" data-theme="welder">
+                    <h2 class="vacancy-title-back">Описание вакансии</h2>
+                    <p class="custom-cardvac-description">Работа нашей в монтажной организации, на предприятиях в
+                        Ступинском районе, монтаж и строительство новых сетей (ЦО и ГВС), сварка стальных труб и в ППУ
+                        изоляции от ф15 до ф400, производство сварочных работ в тепловых камерах, сварка монтаж
+                        металлоконструкций. Оформление по ТК РФ, доставка на объект, дружный коллектив, график работы с
+                        9-00 до 17-00, 5-2, испытательный срок 1 месяц, З/п выплачивается каждую неделю, оплачиваемый
+                        отпуск, больничный лист в соответствии с Законодательством.</p>
+                    <button class="custom-btn custom-outline-vac close">Развернуть</button>
                 </div>
-                <div class="vacancy__info">
-                    <h3 class="h3">Электрик</h3>
-                    <p class="text-job">Наша монтажная организация приглашает на работу электрика для выполнения работ на предприятиях в Ступинском районе. Основные обязанности включают:
-                        Монтаж и строительство новых электрических сетей.
-                        Установка и ремонт электрооборудования и электропроводки.
-                        Выполнение электромонтажных работ в тепловых камерах.
-                        Монтаж и установка электрических металлоконструкций.</p>
-                    <div class="vacancy__btn">
-                        <button class="btn-more"><a class="reset-link" href="contact.html">Отликнуться</a></button>
-                    </div>
-                </div>
-            </article>
-        </div>
+            </div>
+        </article>
     </section>
-        <!-- Footer -->
-        @@include('layout/_footer.html')
-        <!-- End Footer -->
-    
-        <!-- Scripts -->
-        @@include('layout/_scripts.html')
+    <section class="vacancy-2nd-row container">
+        <article class="vacancy-card-container">
+            <!--! карточка электрика -->
+            <div class="vacancy-card" id="card">
+                <div class="vacancy-card-front">
+                    <div class="vacancy-image">
+                        <img src="./assets/images/workers/electrician.avif" alt="электрик">
+                    </div>
+                    <div class="vacancy-header">
+                        <div class="vacancy-info">
+                            <h2 class="vacancy-title">Электрик</h2>
+                            <div class="vacancy-work">
+                                <p class="vacancy-salary">75 000 - 120 000 ₽ за месяц</p>
+                                <span class="vacancy-experience">Опыт от 2 лет</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <button class="custom-btn custom-outline-vac details">Описание вакансии</button>
+                        <button class="contact-button" id="contactButton">Связаться</button>
+                    </div>
+                </div>
+                <div class="vacancy-card-back">
+                    <h2 class="vacancy-title-back">Описание вакансии</h2>
+                    <p class="custom-cardvac-description" data-name="electrician">Наша монтажная организация приглашает на работу электрика для
+                        выполнения работ на предприятиях в Ступинском районе. Основные обязанности включают: Монтаж и
+                        строительство новых электрических сетей. Установка и ремонт электрооборудования и
+                        электропроводки. Выполнение электромонтажных работ в тепловых камерах. Монтаж и установка
+                        электрических металлоконструкций.</p>
+                    <button class="custom-btn custom-outline-vac close">Развернуть</button>
+                </div>
+            </div>
+
+            <!-- <div class="vacancy-card" id="card">
+                <div class="vacancy-card-front">
+                    <div class="vacancy-image">
+                        <img src="./assets/images/workers/welder.avif" alt="Слесарь">
+                    </div>
+                    <div class="vacancy-header">
+                        <div class="vacancy-info">
+                            <h2 class="vacancy-title">Слесарь</h2>
+                            <div class="vacancy-work">
+                                <p class="vacancy-salary">от 80 000 ₽ за месяц, на руки</p>
+                                <span class="vacancy-experience">Опыт 1-3 года</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <button class="custom-btn custom-outline-vac details">Описание вакансии</button>
+                        <button class="contact-button" id="contactButton">Связаться</button>
+                    </div>
+                </div>
+                <div class="vacancy-card-back">
+                    <h2 class="vacancy-title-back">Описание вакансии</h2>
+                    <p class="custom-cardvac-description">Наша монтажная организация приглашает на работу слесаря
+                        для выполнения работ на предприятиях в Ступинском районе. Основные обязанности включают:
+                        Монтаж и строительство новых сетей отопления и горячего водоснабжения (ЦО и ГВС).
+                        Установка и ремонт стальных труб и труб в ППУ изоляции диаметром от ф15 до ф400.
+                        Выполнение слесарных работ в тепловых камерах.
+                        Монтаж и установка металлоконструкций.</p>
+                    <button class="custom-btn custom-outline-vac close">Развернуть</button>
+                </div>
+            </div> -->
+        </article>
+    </section>
+    <!-- Footer -->
+    @@include('layout/_footer.html')
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    @@include('layout/_scripts.html')
 </body>

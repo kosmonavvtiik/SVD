@@ -1,0 +1,258 @@
+.custom-card-container {
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 155px;
+  }
+  
+  .custom-card {
+    width: 350px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    position: relative;
+    will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+  }
+  
+  .custom-card-front,
+  .custom-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(17, 25, 40, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+  }
+  
+  .custom-card-front {
+    z-index: 2;
+  }
+  
+  .custom-banner-image {
+    background-image: url('https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+  }
+  
+  .custom-card-title {
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255, 255, 255, 0.98);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin-top: 10px;
+  }
+  
+  .custom-card-description {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+  
+  .custom-card-back {
+    background: #0b0f08;
+    color: #fff;
+    padding: 20px;
+    transform: rotateY(180deg);
+  }
+  
+  .custom-btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-outline {
+    background: transparent;
+    color: rgba(0, 212, 255, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.6);
+  }
+  
+  .custom-outline:hover {
+    transform: scale(1.125);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .custom-fill {
+    background: rgba(0, 212, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
+  }
+  
+  .custom-fill:hover {
+    transform: scale(1.125);
+  }
+  
+  /* Анимация */
+  .custom-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  
+  
+  
+ 
+/* Основные стили для второй карточки */
+.job-card-container {
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.job-card {
+    width: 600px;
+    height: 800px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    position: relative;
+    will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+}
+
+.job-card-front,
+.job-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(17, 25, 40, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+}
+
+.job-card-front {
+    z-index: 2;
+}
+
+.job-image {
+    width: 280px;
+    height: 360px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.job-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+}
+
+.job-title {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.job-description p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.job-progress {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.job-progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.job-progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
+
+.job-contact-button {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.job-contact-button:hover {
+    background-color: #45a049;
+}
+
+.job-custom-btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.job-custom-outline {
+    background: transparent;
+    color: rgba(0, 212, 255, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.6);
+}
+
+.job-custom-outline:hover {
+    transform: scale(1.125);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.job-card-back {
+    background: #0b0f08;
+    color: #fff;
+    padding: 20px;
+    transform: rotateY(180deg);
+}
+
+/* Анимация */
+.job-card.flipped {
+    transform: rotateY(180deg);
+}

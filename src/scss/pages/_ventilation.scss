@@ -1,106 +1,310 @@
-.custom-card-container {
-  perspective: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 155px;
+/* Общий стиль для всех секций */
+.cards-section {
+    margin-bottom: 40px;
+    padding: 20px;
 }
 
-.custom-card {
-  width: 350px;
-  height: 500px;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-  position: relative;
-  will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+.cards-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.custom-card-front,
-.custom-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: rgba(17, 25, 40, 0.25);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  will-change: transform; /* Подсказка для браузера о том, что свойство будет изменяться */
+/* Стили для первого варианта: Минималистичные карточки */
+.cards-minimal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.custom-card-front {
-  z-index: 2;
+.cards-minimal .service-card {
+    width: calc(33.33% - 20px);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.custom-banner-image {
-  background-image: url('https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1');
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 100%;
+.cards-minimal .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-.custom-card-title {
-  font-family: 'Righteous', sans-serif;
-  color: rgba(255, 255, 255, 0.98);
-  text-transform: uppercase;
-  font-size: 2.4rem;
-  margin-top: 10px;
+.cards-minimal .service-card__header {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eaeaea;
 }
 
-.custom-card-description {
-  font-family: 'Lato', sans-serif;
-  color: #fff;
-  font-size: 0.9rem;
-  margin: 10px 0;
+.cards-minimal .service-card__header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
 }
 
-.custom-card-back {
-  background: #0b0f08;
-  color: #fff;
-  padding: 20px;
-  transform: rotateY(180deg);
+.cards-minimal .service-card__body {
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.custom-btn {
-  border: none;
-  padding: 12px 24px;
-  border-radius: 24px;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.cards-minimal .service-card__footer {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eaeaea;
 }
 
-.custom-outline {
-  background: transparent;
-  color: rgba(0, 212, 255, 0.9);
-  border: 1px solid rgba(0, 212, 255, 0.6);
+.cards-minimal .service-card__button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.custom-outline:hover {
-  transform: scale(1.125);
-  color: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.9);
+.cards-minimal .service-card__button:hover {
+    background-color: #0056b3;
 }
 
-.custom-fill {
-  background: rgba(0, 212, 255, 0.9);
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
+/* Стили для второго варианта: Цветовые акценты */
+.cards-color-accent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.custom-fill:hover {
-  transform: scale(1.125);
+.cards-color-accent .service-card {
+    width: calc(33.33% - 20px);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-/* Анимация */
-.custom-card.flipped {
-  transform: rotateY(180deg);
+.cards-color-accent .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cards-color-accent .service-card--blue::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #007bff;
+}
+
+.cards-color-accent .service-card--green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #34c759;
+}
+
+.cards-color-accent .service-card__content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.cards-color-accent .service-card__content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cards-color-accent .service-card__button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cards-color-accent .service-card__button:hover {
+    background-color: #555;
+}
+
+/* Стили для третьего варианта: Асимметричные карточки */
+.cards-asymmetric {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cards-asymmetric .service-card {
+    width: calc(33.33% - 20px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-asymmetric .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cards-asymmetric .service-card--blue::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    transform: skewX(-15deg);
+    z-index: -1;
+    border-radius: 16px;
+}
+
+.cards-asymmetric .service-card--green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #34c759 0%, #2e7d32 100%);
+    transform: skewX(-15deg);
+    z-index: -1;
+    border-radius: 16px;
+}
+
+.cards-asymmetric .service-card__header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    transform: skewX(15deg);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.cards-asymmetric .service-card__body {
+    flex: 1;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cards-asymmetric .service-card__button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards-asymmetric .service-card__button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.service-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.service-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service-benefits {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.service-benefits li {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.service-benefits li::before {
+    content: "✔";
+    color: #28a745;
+    position: absolute;
+    left: 0;
+}
+
+.service-price {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+    background-color: #218838;
 }

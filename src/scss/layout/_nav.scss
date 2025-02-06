@@ -96,13 +96,13 @@
     &__icons {
         display: flex;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
 
     &__pic {
         width: 40px;
     }
-    
+
     &__tg {
         width: 42px;
     }
@@ -174,6 +174,19 @@
         transform: translateX(100%);
     }
 }
+@media (max-width: 1111px) {
+    .text__name {
+        display: none;
+    }
+
+    .phone {
+        padding-top: 10px;
+    }
+    .nav {
+        gap: 50px;
+        padding: 0 7px 0 7px;
+    }
+}
 
 @media (max-width: 807px) {
     .nav {
@@ -198,7 +211,7 @@
             position: absolute;
             z-index: 5;
             // width: 50px;
-            left: 43%;
+            left: 40.2%;
             // margin-top: -25px;
         }
 
@@ -221,11 +234,11 @@
     .contacts1 {
         display: flex;
         padding: 20px 0px;
-        gap: 25px;
+        gap: 30px;
 
         &__icons1 {
             display: flex;
-            gap: 13px;
+            gap: 20px;
         }
 
         &__pic1 {

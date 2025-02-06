@@ -29,6 +29,106 @@
         </div>
       </div>
     </div>
+
+
+    <article class="job-card-container">
+      <div class="job-card" id="card2">
+          <div class="job-card-front">
+              <div class="job-header">
+                  <div class="job-image">
+                      <img src="./assets/images/electrician.jpg" alt="Электрик">
+                  </div>
+                  <h2 class="job-title">Электрик</h2>
+              </div>
+              <div class="job-description">
+                  <p>Наша компания приглашает на работу электрика для выполнения работ на различных объектах. Основные обязанности включают:</p>
+              </div>
+              <div class="job-progress">
+                  <div class="job-progress-bar">
+                      <div class="job-progress-fill" id="jobProgressFill1"></div>
+                  </div>
+                  <p id="jobProgressText1">Набрано 5 из 10 человек</p>
+                  <p id="jobRemainingPlacesText1"></p>
+              </div>
+              <button class="job-contact-button" id="jobContactButton1">Связаться по телефону +7 (123) 456-78-90</button>
+              <button class="job-custom-btn job-custom-outline job-details">Описание вакансии</button>
+          </div>
+          <div class="job-card-back">
+              <h2 class="job-title">Описание вакансии</h2>
+              <p class="job-custom-card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <button class="job-custom-btn job-custom-outline job-close">Развернуть</button>
+          </div>
+      </div>
+  </article>
+ <!-- Первый вариант: Минималистичные карточки -->
+ <section class="cards-section">
+    <h2>Вариант 1: Минималистичные карточки</h2>
+    <div class="services cards-minimal">
+        <div class="service-card">
+            <div class="service-card__header">
+                <h3>Услуга 1</h3>
+            </div>
+            <div class="service-card__body">
+                <p>Краткое описание услуги.</p>
+            </div>
+            <div class="service-card__footer">
+                <a href="#" class="service-card__button">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card__header">
+                <h3>Услуга 2</h3>
+            </div>
+            <div class="service-card__body">
+                <p>Другое описание услуги.</p>
+            </div>
+            <div class="service-card__footer">
+                <a href="#" class="service-card__button">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Второй вариант: Цветовые акценты -->
+<section class="cards-section">
+    <h2>Вариант 2: Цветовые акценты</h2>
+    <div class="services cards-color-accent">
+        <div class="service-card service-card--blue">
+            <div class="service-card__content">
+                <h3>Услуга 1</h3>
+                <p>Краткое описание услуги.</p>
+                <a href="#" class="service-card__button">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="service-card service-card--green">
+            <div class="service-card__content">
+                <h3>Услуга 2</h3>
+                <p>Другое описание услуги.</p>
+                <a href="#" class="service-card__button">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</section>
+<div class="service-card">
+    <h2 class="service-title">Дизайн интерьера</h2>
+    <p class="service-description">Создадим уютный и функциональный интерьер, который отражает ваш стиль и характер.</p>
+    <ul class="service-benefits">
+        <li>Индивидуальный подход</li>
+        <li>3D-визуализация до начала работ</li>
+        <li>Подбор материалов и мебели</li>
+    </ul>
+    <p class="service-price">От 50 000 рублей</p>
+    <a href="#" class="service-button">Заказать консультацию</a>
+</div>
+
+
+
       
     <!-- Footer -->
     @@include('layout/_footer.html')

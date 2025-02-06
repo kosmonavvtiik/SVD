@@ -1,9 +1,15 @@
-.vacancy {
-    margin-top: 155px;
+.vacancy-2nd-row {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
+}
+.vacancy {
+    padding-top: 110px;
+}
+.vacancy-gl {
+    padding-top: 74px;
+    display: flex;
+    flex-direction: column;
 
     .h3 {
         font-size: 30px;
@@ -13,70 +19,112 @@
 
     &__block {
         display: flex;
+        margin-top: 25px;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px; /* Добавляем отступ между элементами */
     }
 
     &__card {
         display: flex;
+        /* Удаляем жёсткую высоту */
+        /* height: 100%; */
         flex-direction: row;
+        align-items: center;
         gap: 35px;
         border-radius: 24px;
         box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
         padding: 25px;
+        overflow: hidden; /* Обрабатываем переполнение */
     }
 
     &__image {
-        width: 280px;
-        height: 360px;
+        width: 300px; /* Жёсткая ширина по умолчанию */
+        height: 360px; /* Жёсткая высота по умолчанию */
         border-radius: 15px;
         padding: 1.5rem;
         position: relative;
         margin: 0 auto;
         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden; /* Добавляем для обрезки изображения при необходимости */
     }
 
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 100%; /* Изображение занимает всю ширину контейнера */
+        height: 100%; /* Высота также равна высоте контейнера */
+        object-fit: cover; /* Сохраняем пропорции и обрезаем избыток */
+        border-radius: inherit; /* Наследуем радиус от родителя */
         position: absolute;
         top: 0;
         left: 0;
-        border-radius: 15px;
     }
 
     &__btn {
         display: flex;
-        margin: 0 auto;
+        margin-inline: 25px;
+        justify-content: space-evenly;
     }
 
     &__btns {
-
         text-align: center;
     }
-    
-    
+
     &__info {
         display: flex;
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        
-        a {
-            color: #fff;
+    }
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: $tablet-bp) {
+    .vacancy-gl {
+        &__card {
+            flex-direction: column; /* Вертикальное расположение элементов */
+            padding: 30px 60px;
+            gap: 20px; /* Уменьшаем отступы */
+        }
+
+        &__image {
+            width: 100%; /* Изображение занимает всю ширину */
+            height: 315px; /* Высота автоматическая */
+            max-width: 300px; /* Максимальная ширина */
         }
     }
 }
 
-@media (max-width: $tablet-bp) {
-    .vacancy {
+/* Адаптивность для мобильных устройств */
+@media (max-width: $mobile-bp) {
+    .vacancy-gl {
+        padding-top: 40px;
+
+        .h3 {
+            font-size: 24px; /* Уменьшаем размер заголовка */
+        }
+
         &__card {
-            flex-direction: column; // Stack the elements vertically on tablet screens
+            padding: 15px; /* Уменьшаем внутренние отступы */
+        }
+
+        &__info {
+            width: 90%;
         }
 
         &__image {
-            margin-bottom: 20px; // Add some space between the image and the text
+            width: 65%; /* Изображение занимает всю ширину */
+            height: 250px; /* Высота автоматическая */
+            max-width: none; /* Отключаем ограничение максимальной ширины */
+            margin: 0; /* Убираем дополнительные отступы */
+        }
+
+        &__btn {
+            flex-direction: column; /* Кнопки в столбец */
+            margin-inline: 45px; /* Убираем боковые отступы */
+        }
+
+        &__btn button {
+            width: 100%; /* Кнопки занимают всю ширину */
+            margin-bottom: 13px; /* Добавляем отступ между кнопками */
         }
     }
 }
