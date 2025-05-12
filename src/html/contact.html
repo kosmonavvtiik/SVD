@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO & OpenGraph -->
-    <title>Контакты</title>
-    <meta name="description" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <title>Контакты | СВД — Ступино</title>
+    <meta name="description" content="Контакты ООО СВД в Ступино: адрес, телефоны, почта. Звоните или пишите нам для заказа услуг по монтажу цехов, металлоконструкций и обслуживанию оборудования.">
+    <meta name="keywords" content="контакты ООО СВД, монтаж цехов Ступино, металлоконструкции Ступино, строительство складов Ступино, телефон для связи">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Контакты | ООО СВД — Ступино">
+    <meta property="og:description" content="Контакты ООО СВД в Ступино: адрес, телефоны, почта. Звоните или пишите нам для заказа услуг по монтажу цехов, металлоконструкций и обслуживанию оборудования.">
     <meta property="og:image" content="/assets/images/og.jpg">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="">
+    <meta property="og:site_name" content="ООО СВД">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="RU-MOS">
+    <meta name="geo.placename" content="Ступино">
+    <meta name="geo.position" content="54.9008,38.5597">
 
     <!-- Favicon -->
     @@include('layout/_favicon.html')
@@ -22,48 +29,47 @@
     <!-- Styles -->
     @@include('layout/_styles.html')
 </head>
-
 <body>
 
     <!-- Header -->
     @@include('layout/_header.html')
     <!-- End Header -->
 
-    <section class="contact container">
-        <h2 class="contact__name h2_cnt">Контакты</h2>
-        <div class="">
-            <p class="text-cont">Направляйте Ваши заявки на указанные ниже контакты, звоните, в кратчайшие сроки мы
-                произведем расчеты и предоставим коммерческие предложения с учетом Ваших пожеланий.</p>
-        </div>
-        <div class="contact__info">
-            <article class="contact__card">
-                <h3 class="h3 contact__name">Адрес</h3>
-                <p class="contact__name">Московская область, г. Ступино, <br>ул. Куйбышева, 42, <br>142803, Россия</p>
-            </article>
-
-            <article class="contact__card">
-                <h3 class="contact__name h3">Почта</h3>
-                <p class="contact__name">svd16@inbox.ru;
-                    <br>svdden2005@mail.ru
-                </p>
-            </article>
-
-            <article class="contact__card">
-                <h3 class="contact__name h3">Звоните</h3>
-                <div class="contact__call">
-                    <a class="text-phone reset-link" href="tel:+7 (968) 080-34-13">+7 (968) 080-34-13</a>
-                    <a class="text-phone reset-link" href="tel:+7 (926) 360-22-79">+7 (926) 360-22-79</a>
-                </div>
-            </article>
-        </div>
-
-        <div class="contact__map">
-            <h2 class="contact__name h2_cnt">Найти нас на карте:</h2>
-            <iframe class="map"
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaeb38d96ac6846911d90eff15de564154eb69c2220845286fdf9d05b65873733&amp;source=constructor"
-                 frameborder="0"></iframe>
-        </div>
-    </section>
+    <main class="main">
+        <section class="contact container">
+            <h2 class="contact__name h2_cnt">Контакты</h2>
+            <div class="">
+                <p class="text-cont">Направляйте Ваши заявки на указанные ниже контакты ООО 'СВД', звоните или пишите нам. Мы
+                    оперативно произведем расчеты и предоставим коммерческие предложения с учетом ваших пожеланий. Работаем
+                    в Ступино и области.</p>
+            </div>
+            <div class="contact__info">
+                <article class="contact__card">
+                    <h3 class="h3 contact__name">Адрес</h3>
+                    <p class="contact__name">Московская область, г. Ступино, <br>ул. Куйбышева, 42, <br>142803, Россия</p>
+                </article>
+                <article class="contact__card">
+                    <h3 class="contact__name h3">Почта</h3>
+                    <p class="contact__name">svd16@inbox.ru;
+                        <br>svdden2005@mail.ru
+                    </p>
+                </article>
+                <article class="contact__card">
+                    <h3 class="contact__name h3">Звоните</h3>
+                    <div class="contact__call">
+                        <a class="text-phone reset-link" href="tel:+7 (968) 080-34-13">+7 (968) 080-34-13</a>
+                        <a class="text-phone reset-link" href="tel:+7 (926) 360-22-79">+7 (926) 360-22-79</a>
+                    </div>
+                </article>
+            </div>
+            <div class="contact__map">
+                <h2 class="contact__name h2_cnt">Как нас найти:</h2>
+                <iframe class="map"
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaeb38d96ac6846911d90eff15de564154eb69c2220845286fdf9d05b65873733&amp;source=constructor"
+                    frameborder="0"></iframe>
+            </div>
+        </section>
+    </main>
     <!-- Footer -->
     @@include('layout/_footer.html')
     <!-- End Footer -->

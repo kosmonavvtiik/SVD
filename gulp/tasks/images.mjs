@@ -3,6 +3,7 @@ import imagemin from 'gulp-imagemin'
 import changed from 'gulp-changed'
 import webp from 'gulp-webp'
 import avif from 'gulp-avif'
+import plumber from 'gulp-plumber'
 import { paths } from '../config.mjs'
 
 const images = () => {
@@ -22,7 +23,8 @@ const imagesWebp = () => {
 
 const imagesAvif = () => {
     return gulp
-        .src(`${paths.src.images}/**/*.{jpg,jpeg,png,gif}`)
+        .src(`${paths.src.images}/**/*.{jpg,jpeg,png}`) // Исключили .gif
+        .pipe(plumber()) // Защита от ошибок
         .pipe(avif({
             quality: 80
         }))

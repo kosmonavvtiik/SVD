@@ -9,9 +9,10 @@
     background-color: var(--bgborder-color);
 
     &__info {
-        display: flex;
-        justify-content: space-between;
-        padding: 40px;
+        display: flex; /* Используем Flexbox */
+        flex-wrap: wrap; /* Разрешаем перенос строк */
+        justify-content: space-between; /* Располагаем элементы равномерно */
+        gap: 20px; /* Отступы между карточками */
     }
 
     &__card {
@@ -21,9 +22,11 @@
         padding: 20px;
         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
         border-radius: 15px;
-        min-width: 250px;
         background-color: var(--bg-color);
-
+        min-width: 240px; /* Минимальная ширина карточки */
+        max-width: 260px;
+        flex: 1; /* Карточки растягиваются на доступное пространство */
+        transition: all 0.3s ease; /* Плавное изменение размеров */
     }
 
     &__call {
@@ -64,6 +67,13 @@
             margin-left: 0;
             padding: 0 20px;
         }
+        &__info {
+            justify-content: center; /* Центрируем элементы при переносе */
+        }
+
+        &__card {
+            flex: none; /* Отключаем растягивание */
+        }
     }
     .map {
         width: 100%;
@@ -74,15 +84,16 @@
 @media (max-width: $mobile-bp) {
     .contact {
         &__info {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-        &__card{
-            width: 90%;
-            max-width: 400px;
+            flex-direction: column; /* Карточки в столбец */
+            align-items: center; /* Центрируем по горизонтали */
+            gap: 10px; /* Минимальный отступ */
         }
 
+        &__card {
+            width: 90%; /* Карточки занимают 90% ширины экрана */
+            max-width: 350px; /* Отключаем максимальную ширину */
+            min-width: 200px; /* Минимальная ширина для удобства чтения */
+        }
     }
     .map{
         height: 300px;

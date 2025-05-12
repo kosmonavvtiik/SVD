@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- SEO & OpenGraph -->
-    <title>Главная страница</title>
+    <title>Монтаж быстровозводимых цехов и складов из сэндвич-панелей | СВД</title>
     <meta name="description"
-        content="Профессиональный монтаж быстровозводимых цехов и складов из сэндвич-панелей. Токарные, фрезерные работы, изготовление металлоконструкций и обслуживание оборудования.">
-    <meta property="og:title" content="Главная страница | Монтаж и обслуживание промышленных объектов">
+        content="Профессиональный монтаж цехов и складов в Ступино из сэндвич-панелей. Токарные, фрезерные работы, изготовление металлоконструкций.">
+    <meta name="keywords"
+        content="монтаж цехов в Ступино, строительство складов в Ступино, сэндвич-панели Ступино, токарные работы Ступино">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Монтаж быстровозводимых цехов и складов из сэндвич-панелей | SVD">
     <meta property="og:description"
         content="Профессиональный монтаж быстровозводимых цехов и складов из сэндвич-панелей. Токарные, фрезерные работы, изготовление металлоконструкций и обслуживание оборудования.">
-    <meta property="og:site_name" content="Название вашей компании">
+    <meta property="og:site_name" content="SVD-Stroy">
     <meta property="og:image" content="/assets/images/og.jpg">
     <meta property="og:locale" content="ru_RU">
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="RU-MOS">
+    <meta name="geo.placename" content="Ступино">
+    <meta name="geo.position" content="54.9008,38.5597"> <!-- Координаты Ступино -->
     <link rel="canonical" href="https://svd-stroy.ru/">
+
     <!-- Favicon -->
     @@include('layout/_favicon.html')
 
@@ -38,8 +45,8 @@
             <div class="service__content container">
                 <div class="service__column">
                     <div class="service__row">
-                        <h1 class="service__title h1">Монтаж быстровозводимых цехов, складов с коммуникациями из
-                            сэндвич-панелей.</h1>
+                        <h1 class="service__title h1">Профессиональный монтаж быстровозводимых цехов и складов из
+                            сэндвич-панелей</h1>
                         <p class="service__text text-info">Монтаж, ремонт и обслуживание вспомогательного и
                             производственного оборудования,
                             поставка пневматики , подшипников, изготовление запчастей.
@@ -66,7 +73,7 @@
                         <div class="info">
                             <h1>Токарные,<br>Фрезерные работы</h1>
                             <p>Токарные,Фрезерные работы</p>
-                            <button>Перейти</button>
+                            <a href="contact.html"><button>Перейти</button></a>
                         </div>
                     </div>
 
@@ -75,7 +82,7 @@
                         <div class="info">
                             <h1>Изготовление металлоконструкций</h1>
                             <p>Lorem ipsum dolor sit.</p>
-                            <button>Перейти</button>
+                            <a href="contact.html"><button>Перейти</button></a>
                         </div>
                     </div>
                     <div class="card card__stan">
@@ -83,10 +90,36 @@
                         <div class="info">
                             <h1>Обслуживание станций водоподготовки</h1>
                             <p>Lorem Ipsum is simply</p>
-                            <button>Перейти</button>
+                            <a href="contact.html"><button>Перейти</button></a>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="wrappertwo">
+                <a href="" class="wrappertwo__block">
+                    <div class="wrappertwo__img">
+                        <img src="./assets/images/wrappertwo/turning and milling operations2.avif" alt=""
+                            loading="lazy">
+                    </div>
+                    <p class="wrappertwo__text">Токарные / фрезерные работы</p>
+                </a>
+
+                <a href="" class="wrappertwo__block">
+                    <div class="wrappertwo__img">
+                        <img src="./assets/images/wrappertwo/manufacture of metal structures.avif" alt=""
+                            loading="lazy">
+                    </div>
+                    <p class="wrappertwo__text">Изготовление металлоконструкций</p>
+                </a>
+
+                <a href="" class="wrappertwo__block">
+                    <div class="wrappertwo__img wrappertwo__img--plants">
+                        <img src="./assets/images/wrappertwo/Maintenance of water treatment plants.avif" alt=""
+                            loading="lazy">
+                    </div>
+                    <p class="wrappertwo__text">Обслуживание станций  водоподготовки</p>
+                </a>
             </div>
         </section>
 
@@ -106,10 +139,8 @@
                             5-2, испытательный срок 1 месяц, З/п выплачивается каждую неделю, оплачиваемый отпуск,
                             больничный лист в соответствии с Законодательством.</p>
                         <div class="vacancy-gl__btn">
-                            <button class="btn-more"><a class="reset-link" href="contact.html">Отликнуться</a></button>
-                            <button class="btn-see">
-                                <a class="btn-sm reset-link" href="vacancy-gl.html">Узнать больше</a>
-                            </button>
+                            <a href="contact.html"><button class="btn-more">Отликнуться</button></a>
+                            <a href="vacancy.html"><button class="btn-see">Узнать больше</button></a>
                         </div>
                     </div>
                 </article>
@@ -140,13 +171,10 @@
                 <h2 class="h2">О нас</h2>
                 <div class="info-item">
                     <div class="line"></div>
-                    <p>Молодая энергично развивающаяся компания. Специализируемся на проектирование, подборке,
-                        монтаже, ремонте и обслуживании производственного оборудования и инженерных систем. Наша
-                        компания является официальным партнером ООО «Камоцци Пневматика», с действием партнерского
-                        соглашения по всей территории России. У нас своя производственная площадка, с
-                        токарно-фрезерным и зубонарезным оборудованием, изготовим детали и запасные части по Вашим
-                        чертежам. Сотрудничаем с известными компаниями в области восстановления и упрочнения
-                        стальных деталей напылением. </p>
+                    <p>Компания СВД специализируется на проектировании, монтаже и обслуживании промышленных
+                        объектов. Мы выполняем комплексные работы: от строительства быстровозводимых цехов до
+                        обслуживания производственного оборудования. Являемся официальным партнером ООО «Камоцци
+                        Пневматика» и работаем с ведущими компаниями в области восстановления металлических деталей.</p>
                 </div>
                 <div class="info-item">
                     <div class="line"></div>

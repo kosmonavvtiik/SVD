@@ -1,16 +1,19 @@
-import browserSync from 'browser-sync'
-import { paths } from '../config.mjs'
+import browserSync from 'browser-sync';
+import { paths } from '../config.mjs';
 
-const serverBS = browserSync.create()
+const serverBS = browserSync.create();
 const serverConfig = {
-    server: {
-        baseDir: paths.dist._
-    }
-}
+  server: {
+    baseDir: paths.dist._, // Убедитесь, что путь указан правильно
+  },
+};
 
-const server = () => {
-    serverBS.init(serverConfig)
-}
+const server = (done) => {
+  serverBS.init(serverConfig, () => {
+    console.log('✅ Сервер запущен'); // Опционально
+    done(); // Завершаем задачу
+  });
+};
 
-export default server
-export { serverBS }
+export default server;
+export { serverBS };

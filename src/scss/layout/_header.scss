@@ -1,4 +1,3 @@
-
 .header {
     display: flex;
     align-items: center;
@@ -6,86 +5,133 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 4; 
+    z-index: 4;
     background-color: rgb(255, 255, 255);
     justify-content: center;
 }
 
-@media (max-width : $tablet-bp) {
+@media (max-width: $tablet-bp) {
     .header {
         padding: 12px 0;
     }
 }
 
 .menu__container {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 
-  @media (max-width: $tablet-bp) {
-    margin-left: 80px;
-  }
-  @media (max-width: $mobile-bp){
-    margin-left: 123px;
-  }
+    @media (max-width: $tablet-bp) {
+        margin-left: 80px;
+    }
+    @media (max-width: $mobile-bp) {
+        margin-left: 123px;
+    }
 
+    .dropdown-menu {
+        position: absolute;
+        left: -6px;
+        margin-top: 10px;
+        padding: 10px 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        border-radius: 0px 0px 10px 10px;
 
-  .dropdown-menu {
-    position: absolute;
-    left: -6px;
-    margin-top: 10px;
-    padding: 10px 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
+        li {
+            padding: 7px 7px;
+            width: 115px;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: #333;
+
+                &:hover {
+                    color: #ff0000;
+                }
+            }
+        }
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+
+            @media (max-width: $tablet-bp) {
+                transform: translateX(120px);
+                border-radius: 0px 10px 10px 0px;
+                top: -30px;
+            }
+
+            @media (max-width: $mobile-bp) {
+                transform: translateY(-10px);
+                border-radius: 0px 0px 10px 10px;
+                top: 45px;
+            }
+        }
+    }
+
+    @media (max-width: $tablet-bp) {
+        transform: translateX(0px);
+        left: 0px;
+        margin-top: 0px;
+    }
+    @media (max-width: $mobile-bp) {
+        transform: translateX(-10px);
+    }
+}
+
+/* Стили для уведомления */
+.notification {
+    position: absolute; /* Относительно родительского элемента */
+    top: 70%; /* Позиционируем под кнопкой */
+    left: 43.1%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Корректируем центрирование */
+    background-color: #ff4d4d; /* Красный фон */
+    color: white; /* Белый текст */
+    padding: 8px 16px; /* Меньший отступ для мобильных устройств */
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    list-style: none;
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    border-radius: 0px 0px 10px 10px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin-top: 10px; /* Отступ от кнопки */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    font-size: 14px; /* Размер шрифта */
+}
 
-    li {
-      padding: 7px 7px;
-      width: 115px;
-      text-align: center;
+.notification.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
-      a {
-        text-decoration: none;
-        color: #333;
-
-        &:hover {
-          color: #ff0000;
-        }
-      }
+@media (max-width: $tablet-bp) {
+    .notification {
+        top: 0;
+        left: 30%;
+        transform: translateX(30%);
     }
-
-    &.visible {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-
-      @media (max-width: $tablet-bp) {
-        transform: translateX(120px);
-        border-radius: 0px 10px 10px 0px;
-        top: -30px;
-        
-      }
-
-      @media (max-width: $mobile-bp){
-        transform: translateY(-10px);
-        border-radius: 0px 0px 10px 10px;
-        top: 45px;
-      }
+}
+/* Адаптация для мобильных устройств */
+@media (max-width: $mobile-bp) {
+    .notification {
+        font-size: 12px; /* Уменьшаем размер шрифта */
+        padding: 6px 12px; /* Уменьшаем отступы */
+        top: 59%;
+        left: 49%;
+        transform: translateX(-50%);
     }
-  }
-
-  @media (max-width: $tablet-bp) {
-    transform: translateX(0px);
-    left: 0px;
-    margin-top: 0px;
-    
-  }
-  @media (max-width: $mobile-bp){
-    transform: translateX(-10px);
-  }
+}
+@media (max-width: $small-mobile-bp) {
+    .notification {
+        left: 39%;
+        top: 65%;
+        font-size: 10px;
+    }
 }

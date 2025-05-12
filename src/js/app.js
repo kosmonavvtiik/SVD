@@ -6,6 +6,7 @@ import VacCard from './modules/vac-card.js';
 import AboutUs from './modules/about-us.js';
 import VentCard from './modules/vent-card.js';
 import HrefCard from './modules/href-card.js';
+import DisabledBtn from './modules/disabled-btn.js';
 
 
 
@@ -18,6 +19,7 @@ const init = () => {
     AboutUs()
     VentCard()
     HrefCard()
+    DisabledBtn()
 }   
 
 init()
