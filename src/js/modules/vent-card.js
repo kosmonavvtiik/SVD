@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Вычисляем количество набранных и оставшихся людей
         const currentPeople = Math.floor((currentProgress / 100) * totalPeople);
         const remainingPeople = totalPeople - currentPeople;
-
         // Обновляем прогресс
         progressBar.style.width = currentProgress + '%';
         progressText.textContent = `Набрано ${currentPeople} из ${totalPeople} человек`;
